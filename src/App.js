@@ -32,9 +32,9 @@ const App = () => {
         - otherwise just return the post object unchanged.
      */
       setPosts(
-        posts.map(id => {
-          if (postId === posts.id) {
-            return posts.likes + 1;
+        posts.map(obj => {
+          if (postId === obj.id) {
+            return (obj.likes + 1);
           }
         })
       )
