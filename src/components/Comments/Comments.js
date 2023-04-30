@@ -8,7 +8,12 @@ const Comments = props => {
 
   return (
     <div>
+      <ul>
       {/* map through the comments prop and render a Comment for every piece of data */}
+      { comments.map( (obj, index) => {
+        return <li key= { obj.id }>{ obj.username } {'says: "'} { obj.text } {'"   '}</li>
+      })}
+      </ul>
     </div>
   );
 };
